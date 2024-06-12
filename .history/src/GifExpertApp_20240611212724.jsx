@@ -6,7 +6,7 @@ export const GifExpertApp = () => {
 
 
 
-    const [ categories , setCategories ] = useState([ 'One Punch', 'Dragon Ball']);
+    const [ categories , setCategories ] = useState([ 'One Punch']);
 
     console.log(categories);
 
@@ -17,11 +17,9 @@ export const GifExpertApp = () => {
     {/*Input */}
     {/*Listado de gif */}
     <ol>
-        { categories.map( category => {
-                return <li key={category}>{category} </li>
-        }) }
         <li>ABC</li>
-
+        <li>123</li>
+        <li>XYZ</li>
     </ol>
     {/* gif Item */}
     
