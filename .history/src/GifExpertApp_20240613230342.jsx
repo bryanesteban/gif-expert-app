@@ -11,7 +11,7 @@ export const GifExpertApp = () => {
 
     const onAddCategory = ( newCategory ) => {
         
-        if(categories.includes(newCategory) ) return ;
+        if(categories.filter(newCategory) === true ) return ;
         setCategories([...categories,newCategory]);
 
         // setCategories(cat => [...cat,'Fullmetal Alchemist']);

@@ -1,7 +1,7 @@
 import { useState } from "react";
 // import PropTypes from 'prop-types';
 
-export  const AddCategory = ( { onNewCategory } ) =>{
+export  const AddCategory = ( { setCategories } ) =>{
    
 
    const [inputValue, setInputValue] = useState('One Punch');
@@ -15,8 +15,7 @@ export  const AddCategory = ( { onNewCategory } ) =>{
 
         if(inputValue.trim().length <= 1 ) return;
         
-        // setCategories(categories => [inputValue, ...categories] );
-        onNewCategory( inputValue.trim() );
+        setCategories(categories => [inputValue, ...categories] );
         setInputValue('');
     }
    
