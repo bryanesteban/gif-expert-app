@@ -1,0 +1,27 @@
+import { useState, useEffect } from 'react';
+import { getGifs } from '../helpers/getGifs';
+
+
+
+export const GifGrid = ( { category } ) => {
+   
+    const [images, setImages] = useState([]);
+
+    useEffect( () => {
+        getGifs(category);
+    },[images])
+
+
+    return (
+        <>
+            <h3> { category } </h3>
+
+            <ol>
+                <li>Titulo</li>
+                <li>Titulo</li>
+                <li>Titulo</li>
+                <li>Titulo</li>
+            </ol>
+        </>
+    )
+}

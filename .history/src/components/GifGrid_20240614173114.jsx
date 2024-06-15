@@ -25,9 +25,10 @@ export const GifGrid = ( { category } ) => {
             <h3> { category } </h3>
             <ol>
            {
-                images.map(  ({ id, title }) => (
-                    <li key={ id }>{ title }</li>
-                    
+                images.map(  img => (
+                    <li key={ img.id }>{ img.title }</li>
+
+
                 ))
             } 
         </ol>
