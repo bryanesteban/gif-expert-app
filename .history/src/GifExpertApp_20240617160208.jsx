@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import { AddCategory, GifGrid } from "./components/index";
+import { AddCategory, } from "./components";
 import { AddCategory } from "./components/AddCategory";
 import { GifGrid } from "./components/GifGrid";
 
