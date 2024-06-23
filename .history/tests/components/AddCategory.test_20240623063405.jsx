@@ -41,16 +41,17 @@ describe('Pruebas en <AddCategory/>', () => {
 
      test('no debe de llamar el onNewCategory si el input esta vacio', () => { 
         
-        const onNewCategory = jest.fn(); //simula una funcion
+        const inputValue = ''; //declara una variable
+
         render( <AddCategory onNewCategory={ onNewCategory }/> );  //rendiriza el componente
 
-
+        const input = screen.getByRole('textbox'); //toma el input como obejeto
         const form = screen.getByRole('form');  //toma el form como objeto
+
+        fireEvent.input( input, { target: { value : inputValue } }) ; //dispara el input
         fireEvent.submit( form );   //dispara el objeto
 
         expect( onNewCategory ).toHaveBeenCalledTimes( 0 ); //prueba que se llame la funcion 2 veces
-        // expect( onNewCategory ).not.toHaveBeenCalled(); //prueba que se llame la funcion 2 veces
-      
-    })
+      })
 
  })

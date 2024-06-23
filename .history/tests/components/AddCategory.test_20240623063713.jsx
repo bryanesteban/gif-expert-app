@@ -49,7 +49,7 @@ describe('Pruebas en <AddCategory/>', () => {
         fireEvent.submit( form );   //dispara el objeto
 
         expect( onNewCategory ).toHaveBeenCalledTimes( 0 ); //prueba que se llame la funcion 2 veces
-        // expect( onNewCategory ).not.toHaveBeenCalled(); //prueba que se llame la funcion 2 veces
+        expect( onNewCategory ).not.toHaveBeenCalled(); //prueba que se llame la funcion 2 veces
       
     })
 
